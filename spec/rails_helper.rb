@@ -4,8 +4,8 @@ require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 
-require 'factory_girl_rails'
-require 'devise'
+# require 'factory_girl_rails'
+# require 'devise'
 require 'capybara/rails'
 
 # require all rb files in the support directory
@@ -32,10 +32,10 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
 
   # Factory Girls Configuration
-  config.include FactoryGirl::Syntax::Methods
-  config.include Devise::TestHelpers, type: :controller
+  # config.include FactoryGirl::Syntax::Methods
+  # config.include Devise::TestHelpers, type: :controller
 
-  config.include DeviseSupport
+  # config.include DeviseSupport
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
