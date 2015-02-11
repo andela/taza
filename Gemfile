@@ -43,6 +43,7 @@ group :development, :test do
   gem 'spring'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 group :test do
   # Use rspec for testing
