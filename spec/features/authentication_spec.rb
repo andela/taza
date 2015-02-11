@@ -1,21 +1,17 @@
 require 'rails_helper'
 
-describe "login with google id should redirect to home page" do
-  before do
-    #puts user_omniauth_authorize_path(:google_oauth2) #/users/auth/google_oauth2
-    #Capybara.current_driver = :selenium #change drive according whit https://github.com/jnicklas/capybara#drivers
-    #visit  users_omniauth_authorize_path(:google_oauth2)
-  end
+describe "login with google id should redirect to home page", :js => true do
   it "should login with google" do
     visit "/"
     click_on "Sign in with Google"
 
-    fill_in 'Email', :with => 'calendarizeapp@gmail.com'      # Use your test login id
-    fill_in 'Passwd', :with => '1234567'                  # Use your test login password
+    fill_in 'Email', :with => 'tolulope.komolafe@andela.co'      # Use your test login id
+    fill_in 'Passwd', :with => 'adohim_03'                  # Use your test login password
     click_button 'signIn'
-
     #click_button 'approve_button'
+    #click_on 'Accept'
 
-    page.has_content?('AAAA')                          # Use your assert here
+
+    expect(page).to have_content('Accept')                         # Use your assert here
   end
 end
