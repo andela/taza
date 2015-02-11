@@ -1,4 +1,5 @@
 require 'spec_helper'
 
-describe "#homes" do   
+describe "#homes" do
+
 end
