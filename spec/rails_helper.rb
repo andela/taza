@@ -4,8 +4,9 @@ require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 
-# require 'factory_girl_rails'
-# require 'devise'
+#require 'factory_girl_rails'
+#require 'devise'
+require 'selenium-webdriver'
 require 'capybara/rails'
 
 # require all rb files in the support directory
@@ -20,6 +21,15 @@ ActiveRecord::Migration.maintain_test_schema!
 # require_relative 'support/fixture_builder'
 
 Capybara.javascript_driver = :webkit
+Capybara.default_driver = :selenium
+
+Capybara.register_driver :selenium do |app|
+  http_client = Selenium::WebDriver::Remote::Http::Default.new
+  http_client.timeout = 180         # 3 minutes
+
+  Capybara::Selenium::Driver.new(app, :browser => :chrome, :http_client => http_client)
+end
+
 
 RSpec.configure do |config|
   config.render_views
