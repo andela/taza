@@ -72,8 +72,8 @@
       <file leaf-file-name="application.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66992664" vertical-offset="191" max-vertical-offset="615">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.7432763" vertical-offset="191" max-vertical-offset="630">
+              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -740,8 +740,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66992664" vertical-offset="191" max-vertical-offset="615">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.7432763" vertical-offset="191" max-vertical-offset="630">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
           <folding />
         </state>
       </provider>
