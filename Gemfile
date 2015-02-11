@@ -44,6 +44,9 @@ group :development, :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'devise'
+  gem 'omniauth'
+  gem "omniauth-google-oauth2"
 end
 group :test do
   # Use rspec for testing
