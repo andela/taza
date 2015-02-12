@@ -31,7 +31,6 @@ Capybara.register_driver :selenium do |app|
 
 end
 
-
 RSpec.configure do |config|
   config.render_views
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
