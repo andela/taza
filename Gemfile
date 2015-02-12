@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use devise for authentication
 gem 'devise'
+gem 'omniauth'
+gem "omniauth-google-oauth2"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -48,8 +50,6 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
-  gem 'omniauth'
-  gem "omniauth-google-oauth2"
 end
 group :test do
   # Use rspec for testing
