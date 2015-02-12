@@ -8,8 +8,6 @@ describe "login with google id should redirect to home page", :js => true do
     fill_in 'Email', :with => 'tolulope.komolafe@andela.co'      # Use your test login id
     fill_in 'Passwd', :with => 'adohim_03'                  # Use your test login password
     click_button 'signIn'
-    #click_button 'approve_button'
-    #click_on 'Accept'
 
 
     expect(page).to have_content('Accept')                         # Use your assert here
