@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb98aea8-a237-4a2e-837f-5c0d78729260" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/authentication_spec.rb" afterPath="$PROJECT_DIR$/spec/features/authentication_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="taza.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -133,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/spec/features/authentication_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5134474" vertical-offset="0" max-vertical-offset="409">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -849,7 +850,7 @@
     <entry file="file://$PROJECT_DIR$/spec/features/authentication_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5134474" vertical-offset="0" max-vertical-offset="409">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
