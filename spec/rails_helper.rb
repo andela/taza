@@ -8,7 +8,6 @@ require 'rspec/rails'
 #require 'devise'
 require 'selenium-webdriver'
 require 'capybara/rails'
-require 'capybara/rspec'
 
 # require all rb files in the support directory
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
