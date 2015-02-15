@@ -1,0 +1,8 @@
+<%= @user.name %>
+<%= form_tag("/users", method: "put") do %>
+    <%= radio_button_tag('user[role]', "fellow") %>
+    <%= label_tag(:role_fellow, "Fellow") %>
+    <%= radio_button_tag('user[role]', "mentor") %>
+    <%= label_tag(:role_mentor, "Mentor") %>
+    <%= submit_tag("Submit") %>
+<% end %>

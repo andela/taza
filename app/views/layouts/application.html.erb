@@ -2,26 +2,28 @@
 <html>
 <head>
   <title>Taza</title>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="navbar-text pull-right">
-  <%= link_to "About", '#', class: "btn btn-default" %>
-  <%= link_to "What we do", '#', class: "btn btn-default" %>
-  <%= link_to "Fellowship", '#', class: "btn btn-default" %>
-  <% if current_user %>
-      Signed in as <strong><%= current_user.name %></strong>!
-      <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-      <%= link_to "Sign In", "/auth/google_oauth2", id: "sign_in", class: "btn btn-default" %>
-  <% end %>
-</p>
-
-
+<div class="btn-group pull-right">
+  <p class="navbar-text">
+    <%= link_to "About", '#', class: "btn btn-default" %>
+    <%= link_to "What we do", '#', class: "btn btn-default" %>
+    <%= link_to "Fellowship", '#', class: "btn btn-default" %>
+    <% if current_user %>
+        <strong><%= current_user.name %></strong>!
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+    <% else %>
+          <%=link_to "Sign In", "/auth/google_oauth2", id: "sign_in", class:"btn btn-default"%>
+        </ul>
+    <% end %>
+    </p>
+</div>
+<% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+<% end -%>
 <%= yield %>
 
 </body>

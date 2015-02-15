@@ -1,0 +1,5 @@
+<%= form_for @user, url: {action: "update"} do |user_form| %>
+    <%= user_form.text_field :name %>
+    <%= user_form.submit "Edit", class: "edit_button"%>
+
+<% end %>
