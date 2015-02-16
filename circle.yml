@@ -2,6 +2,6 @@ deployment:
   production:
     branch: master
     commands:
-      - git push git@heroku.com:andela-taza.git $CIRCLE_SHA1:refs/heads/master
-      - heroku run rake db:migrate --app andela-taza:
+      - git push git@heroku.com:taza-staging.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake db:migrate --app taza-staging:
           timeout: 400 # if your deploys take a long time
