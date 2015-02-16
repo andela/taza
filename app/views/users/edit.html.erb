@@ -1,5 +1,7 @@
-<%= form_for @user, url: users_path do |user_form| %>
-    <%= user_form.text_field :name %>
-    <%= user_form.submit "Edit", class: "edit_button"%>
+<div id="form">
+    <%= form_for @user, url: users_path do |user_form| %>
+        <%= user_form.text_field :name %>
+        <%= user_form.submit "Edit", class: "edit_button"%>
 
-<% end %>
+    <% end %>
+</div>
