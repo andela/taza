@@ -1,3 +1,132 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.banner {
+  margin-top: 30px;
+  background: url('bn.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  padding: 3em 0;
+}
+.caption {
+  width: 50%;
+  float: right;
+  position: initial;
+  background: rgba(224, 238, 238, .6);
+  padding: 2em;
+  margin: 10em 0 0 10em;
+}
+.caption h3, p {
+  font-weight: bold;
+  color: #000;
+}
+.caption h3 {
+  text-align: center;
+}
+.caption>p, .col-md-6>p, .container>.text-muted{
+  text-align: justify;
+  text-justify: inter-word;
+}
+.features {
+  position: relative;
+  padding: 4em 0 6em;
+  background: #e3e9f2;
+}
+.features h3, p {
+  padding: 0 0 0.5em;
+}
+.features hr {
+  border-color: #C8D8DD;
+  box-shadow: 0 1px 0 #fff;
+}text
+.role {
+  position: relative;
+}
+.container .text-center{
+  color: #53868b;
+}
+.col-md-6 p {
+  font-weight: normal;
+}
+.footer-clear {
+  padding-bottom: 100px;
+  background: #e3e9f2;
+}
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3em 0 5em;
+  color: #ccc;
+  background: #484c5f;
+}
+footer a,
+footer a:hover {
+  color: #fff;
+}
+
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 80px auto;
+  }
+  .navbar-nav > li {
+    margin: 0 0 0 1.4em;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 920px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+  .content {
+    padding: 1em 0;
+  }
+  .navbar-brand {
+    padding: 14px;
+  }
+  .nav > li > a {
+    padding: 20px 15px;
+  }
+  .nav a.bdr {
+    border: none;
+  }
+  .caption {
+    width: 100%;
+    position: initial;
+  }
+  footer .text-right {
+    text-align: left;
+  }
+  .nav > li > a.signin-btn,
+  .nav > li > a.signin-btn:hover {
+    margin: 10px 15px;
+  }
+  .navbar {
+    height: 50px;
+  }
+  .navbar-nav {
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+  .user-profile dd {
+    margin: 0;
+  }
+  footer {
+    padding: 2em 0 6em;
+  }
+  .navbar-nav .open .dropdown-menu {
+    background: #484c5f;
+  }
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 15px;
+  }
+}
