@@ -56,8 +56,10 @@ group :development, :test do
   gem 'chromedriver-helper'
 end
 group :test do
+  gem "codeclimate-test-reporter", require: nil
   # Use rspec for testing
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'simplecov', :require => false
 end
 
