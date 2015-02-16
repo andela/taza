@@ -1,4 +1,11 @@
 require 'capybara/rspec'
+if ENV['CIRCLE_ARTIFACTS']
+  require "codeclimate-test-reporter"
+  CodeClimate::TestReporter.start
+  require 'simplecov'
+  dir = File.join("..", "..", "..", ENV['CIRCLE_ARTIFACTS'], "coverage")
+  SimpleCov.coverage_dir(dir)
+end
 RSpec.configure do |config|
   config.include Capybara::DSL
   # rspec-expectations config goes here. You can use an alternate
