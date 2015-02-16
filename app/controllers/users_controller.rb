@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def update
-    byebug
     @user = current_user
     if @user.update_attributes!(user_params)
       redirect_to edit_users_path
