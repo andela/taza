@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def update
-    byebug
     @user = current_user
+    user_params = params.require(:user).permit(:role, :name)
     if @user.update_attributes!(user_params)
       redirect_to edit_users_path
       flash[:notice] = "You have successfully updated your profile"
@@ -12,8 +12,8 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
   end
-  private
-  def user_params
-    params.require(:user).permit(:role, :name)
-  end
+  # private
+  # def user_params
+  #   params.require(:user).permit(:role, :name)
+  # end
 end
