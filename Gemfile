@@ -46,12 +46,16 @@ group :development, :test do
   #gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
   gem 'web-console', '~> 2.0'
+ 
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'faker'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 end
@@ -59,7 +63,6 @@ group :test do
   gem "codeclimate-test-reporter", require: nil
   # Use rspec for testing
   gem 'rspec'
-  gem 'rspec-rails'
   gem 'simplecov', :require => false
 end
 
