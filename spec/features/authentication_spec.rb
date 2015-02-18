@@ -5,8 +5,8 @@ describe "login with google id should redirect to home page", :js => true do
     visit "/"
     click_on "Sign In"
 
-    fill_in 'Email', :with => 'tolulope.komolafe@andela.co'      # Use your test login id
-    fill_in 'Passwd', :with => 'adohim_03'                  # Use your test login password
+    fill_in 'Email', :with => '1testertest1@gmail.com'      # Use your test login id
+    fill_in 'Passwd', :with => 'p87654321'                  # Use your test login password
     click_button 'signIn'
 
 
