@@ -21,19 +21,19 @@
                 <li><%= link_to "What we do", '#' %></li>
                 <li><%= link_to "Fellowship", '#' %></li>
                 <% if current_user %>
-                    <li class="strong"><strong><%= current_user.name %></strong>!</li>
-                    <li class="active"><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+                    <li><strong><%= current_user.name %></strong>!</li>
+                    <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
                 <% else %>
-                    <li class="active"><%=link_to "Sign In", "/auth/google_oauth2", id: "sign_in" %></li>
+                    <li><%=link_to "Sign In", "/auth/google_oauth2", id: "sign_in" %></li>
                 <% end %>
               </ul>
             </div>
           </div>
         </nav>
-              <% flash.each do |name, msg| -%>
-                  <%= content_tag :div, msg, class: name %>
-              <% end -%>
-      <%= yield %>
+        <% flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, class: name %>
+        <% end -%>
+        <%= yield %>
         <footer>
           <div class="container">
             <div class="row">
