@@ -1,4 +1,3 @@
-require 'capybara/rspec'
 if ENV['CIRCLE_ARTIFACTS']
   require "codeclimate-test-reporter"
   CodeClimate::TestReporter.start
@@ -7,7 +6,6 @@ if ENV['CIRCLE_ARTIFACTS']
   SimpleCov.coverage_dir(dir)
 end
 RSpec.configure do |config|
-  config.include Capybara::DSL
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

@@ -21,12 +21,6 @@
                 <li><%= link_to "Our Fellows", '#' %></li>
                 <li><%= link_to "Your Role", '#' %></li>
                 <li><%= link_to "How it Works", '#' %></li>
-                <% if current_user %>
-                    <li id="name"><%= link_to current_user.name %></li>
-                    <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
-                <% else %>
-                    <li><%= link_to "Sign In", "/auth/google_oauth2", id: "sign_in" %></li>
-                <% end %>
               </ul>
             </div>
           </div>

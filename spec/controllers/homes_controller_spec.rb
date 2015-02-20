@@ -1,5 +1,9 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe "#homes" do
-
+describe HomesController do
+  describe "#show" do
+    it "placeholder" do
+      expect(true).to eq(true)
+    end
+  end
 end

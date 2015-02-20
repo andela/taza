@@ -5,10 +5,6 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 
 #require 'factory_girl_rails'
-#require 'devise'
-require 'selenium-webdriver'
-require 'capybara/rails'
-require 'capybara/rspec'
 
 # require all rb files in the support directory
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
@@ -21,17 +17,6 @@ ActiveRecord::Migration.maintain_test_schema!
 # Require fixture builder for auto generating fixtures
 # require_relative 'support/fixture_builder'
 
-Capybara.javascript_driver = :webkit
-Capybara.default_driver = :selenium
-
-Capybara.register_driver :selenium do |app|
-  http_client = Selenium::WebDriver::Remote::Http::Default.new
-  http_client.timeout = 180         # 3 minutes
-
-  Capybara::Selenium::Driver.new(app, :browser => :firefox, :http_client => http_client)
-
-end
-
 RSpec.configure do |config|
   config.render_views
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
@@ -40,13 +25,7 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = false
-
-  # Factory Girls Configuration
-  # config.include FactoryGirl::Syntax::Methods
-  # config.include Devise::TestHelpers, type: :controller
-
-  # config.include DeviseSupport
+  config.use_transactional_fixtures = true
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
