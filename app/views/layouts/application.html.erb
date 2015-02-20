@@ -21,6 +21,11 @@
                 <li><%= link_to "Our Fellows", '#' %></li>
                 <li><%= link_to "Your Role", '#' %></li>
                 <li><%= link_to "How it Works", '#' %></li>
+                <% if user_signed_in? %>
+                    <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %></li>
+                <% else %>
+                    <li><%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %></li>
+                <% end %>
               </ul>
             </div>
           </div>
@@ -28,6 +33,8 @@
         <% flash.each do |name, msg| -%>
             <%= content_tag :div, msg, class: name %>
         <% end -%>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
         <%= yield %>
         <footer>
           <div class="container">

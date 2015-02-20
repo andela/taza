@@ -30,10 +30,18 @@ gem 'autoprefixer-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+
+# Use Figaro to store environment secrets
+gem 'figaro'
+
 group :development do
   gem 'git-duet'
 end
 
+# Devise and google Authentication
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views

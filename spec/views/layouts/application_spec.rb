@@ -9,5 +9,27 @@ describe "layouts/application.html.erb" do
       expect(rendered).to have_link("Our Fellows")
       expect(rendered).to have_link("Your Role")
       expect(rendered).to have_link("How it Works")
-  end
+      expect(rendered).to have_link("Sign in with Google")
+
+    end
+
+    describe "User Sign in" do
+      before do
+        allow(view).to receive(:user_signed_in?).and_return(false)
+      end
+      it "shows the signin link" do
+        render
+        expect(rendered).to have_link("Sign in with Google")
+      end
+    end
+
+    describe "User Sign Out" do
+      before do
+        allow(view).to receive(:user_signed_in?).and_return(true)
+      end
+      it "shows the signout link" do
+        render
+        expect(rendered).to have_link("Sign Out")
+      end
+    end
 end
