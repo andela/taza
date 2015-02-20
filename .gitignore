@@ -11,5 +11,5 @@
 log/*
 !/log/.keep
 /tmp
-*.idea
+.idea
 .DS_Store
