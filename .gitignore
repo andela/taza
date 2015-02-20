@@ -13,3 +13,4 @@ log/*
 /tmp
 .idea
 .DS_Store
+public/assets
