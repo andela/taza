@@ -1,4 +1,5 @@
 if ENV['CIRCLE_ARTIFACTS']
+  require 'capybara/rspec'
   require "codeclimate-test-reporter"
   CodeClimate::TestReporter.start
   require 'simplecov'
