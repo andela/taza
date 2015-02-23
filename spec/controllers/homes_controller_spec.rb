@@ -7,7 +7,7 @@ describe HomesController do
     end
   end
 
-  it 'renders the :homes view' do
+  it 'renders the :about view' do
     get :show
     expect(response).to render_template :show
   end
