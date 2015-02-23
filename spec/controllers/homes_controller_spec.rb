@@ -6,4 +6,9 @@ describe HomesController do
       expect(true).to eq(true)
     end
   end
+
+  it 'renders the :homes view' do
+    get :show
+    expect(response).to render_template :show
+  end
 end
