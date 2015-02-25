@@ -1,5 +1,5 @@
 // Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in layout.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html,
 body {
@@ -7,7 +7,7 @@ body {
   padding:0;
   height:100%;
 }
-#wrapper {
+.wrapper {
   min-height:100%;
   position:relative;
 }
@@ -75,8 +75,8 @@ body {
   box-shadow: 0 1px 0 #fff;
 }
 footer {
-  position: absolute;
-  bottom: 0;
+//  position: absolute;
+//  bottom: 0;
   left: 0;
   width: 100%;
   padding: 1em 0 5em;
