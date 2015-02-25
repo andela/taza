@@ -1,3 +1,139 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.about_us_page {
+  background-image: url('dotted-map.png');
+  margin-top: 0.5%;
+  background-size: 100% 100%;
+  min-height: 600px;
+  margin-bottom: 0.5%;
+}
+.text_container {
+  margin-top: 7%;
+  min-height: 200px;
+  background-color: white;
+  opacity: 0.8;
+  padding: 5% 0%;
+}
+.meet_text h3{
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 1%;
+}
+.meet_text{
+  color: black;
+  margin-bottom: 2%;
+  margin-top: 10%;
+  color: #576779;
+}
+.about_container {
+  margin-top: 7% !important;
+  padding-bottom: 3%;
+}
+.text_div {
+  font-size: 13px;
+  color: #3d4351;
+  padding: 10%;
+}
+.text_div h4 {
+  font-weight: 500;
+}
+.navs_bars ul li a:hover {
+  text-decoration: none !important;
+}
+.navs_bars ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 8px 4px 10px 20px;
+}
+.current {
+  color: #fff;
+  width: 70%;
+  border-left: 5px solid #ec6c5d !important;
+  background-color: #576779;
+  padding: 1.3% 1%;
+  margin-left: -2px;
+}
+.current a {
+  color: #fff;
+}
+.navs_bars ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: -6px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.new_container {
+  /*margin-left: 5px;
+  margin-right: 5px;*/
+}
+.nav_col {
+  padding-left: 0;
+}
+
+.about_text_div h4,.about_text_div blockquote {
+  text-align: center;
+}
+
+.about_text_div blockquote {
+  font-size: 16px !important;
+}
+.group:after, .group:before {
+  content: ".";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  *zoom: 1;
+}
+.transparent_about_div{
+  margin-top: 97px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.about_sidebar{
+  margin-left: -24px;
+}
+
+li.meet_the_team.current{
+  margin-left: -11px;
+}
+@media screen and (max-width: 760px) {
+  .current {
+    width: auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  .nav_col {
+    position: relative;
+    top: 11px;
+    left: 100px;
+  }
+  .text_div blockquote {
+    font-size: 1.05em;
+  }
+  .text_div.about_text_div {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav_col {
+    position: relative;
+    top: 11px;
+    left: 98px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .nav_col {
+    left: 66px;
+    position: relative;
+    top: 22px;
+  }
+}
