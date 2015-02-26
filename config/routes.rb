@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'about',to: 'about#show', as: :about
+  get 'theteam', to: 'theteam#show', as: :theteam
   resource :home, only: [:show]
   root 'homes#show'
 
