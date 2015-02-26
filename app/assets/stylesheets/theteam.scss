@@ -1,0 +1,203 @@
+// Place all the styles related to the theteam controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.meet_container{
+  width: 98%;
+  margin-bottom: 2%;
+  margin-top: 71px;
+}
+.photos_divs, .description{
+  border-radius: 5px;
+  height: 140px;
+  width: 140px;
+  transition-duration:1s;
+  -webkit-transition-duration:1s;
+}
+.photos_divs .flaticon-uniE4B2:before
+{
+  color:#fff;
+  font-size: 20px;
+  text-shadow: 1px 2px 5px #111;
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  transition-duration:1s;
+  -webkit-transition-duration:1s;
+}
+
+.description {
+  display: none;
+  background-color: #ec6c5d;
+  padding: 7px;
+}
+
+.team:hover .description {
+  border: 1px solid #ec6c5d;
+  display: block;
+  cursor: pointer;
+  color: #FFF;
+}
+.team:hover .photos_divs {
+  display:none;
+}
+.activeMember.team .description {
+  display: none;
+}
+.activeMember.team .photos_divs{
+  display: block;
+}
+.member_name{
+  font-weight: 400;
+  padding: 7px 7px 0 7px;
+}
+
+.member_position{
+  padding: 0 7px 7px 7px;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.flaticon-uniE416:before{
+  font-size: 10px;
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
+
+.text_file{
+  width: 80%;
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.text_file p{
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-size: 1em;
+  margin-bottom: 1.2em;
+  color: #576779;
+  line-height: 17px;
+  font-weight: 100;
+}
+.col-xs-3, .col-md-2{
+  padding: 0.5%;
+}
+
+.meet_text h3{
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 1%;
+}
+.meet_text{
+  color: black;
+  margin-bottom: 4%;
+  color: #576779;
+}
+li a{
+  color: black;
+  font-size: 1.0em;
+}
+li a:hover{
+  text-decoration: none;
+}
+ul{
+  padding-left: 3%;
+}
+
+#member-grid{
+
+}
+
+li{
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.photos_divs img{
+  height: 140px;
+  width: 140px;
+  border-radius: 5px;
+}
+.meet_text hr {
+  width: 10%;
+  border: 1px solid #585A5C;
+  height: 1px ! important;
+  background-color: #585A5C;
+  left: 0;
+}
+.content_container{
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.member-expanded {
+  border-top:4px solid transparent;
+  display: none;
+  clear: both;
+  margin: 20px 10px 0 0 !important;
+}
+.member-expanded>div
+{
+  clear: both;
+}
+.member-expanded h5
+{
+  display: block;
+  font-size: 0.8em;
+  font-weight: 700;
+  clear:both;
+}
+.member-expanded .selected-name
+{
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.member-active {
+  border-color: red;
+}
+
+@media screen and (min-width: 1167px) and (max-width: 1235px) {
+  #member-grid .member {
+    width: 18% !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1167px) {
+  #member-grid .member {
+    width: 25% !important;
+  }
+}
+@media screen and (min-width: 525px) and (max-width: 865px) {
+  #member-grid .member {
+    width: 33.33% !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .new_container {
+    padding-top: 110px;
+  }
+  .meet_container{text-align: center !important; max-width: 100%;}
+  .member-expanded{max-width: 98%;}
+}
+
+@media screen and (max-width: 760px) {
+  .member.col-xs-12 {
+    width: 24% !important;
+  }
+  .text_file{width: auto;}
+}
+@media screen and (max-width: 600px) {
+  .member.col-xs-12 {
+    width: 33% !important;
+  }
+  .new_container {
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .member.col-xs-12 {
+    width: 50% !important;
+  }
+}
