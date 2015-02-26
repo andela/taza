@@ -1,0 +1,55 @@
+<section>
+  <div class="new_container">
+      <div class="col-md-12 meet_container">
+        <div class="meet_text">
+          <hr>
+          <h3>MEET THE TEAM</h3>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="side_bar">
+            <div class="link-controls navs_bars">
+              <ul>
+                <li><a href="/#!/about_us">ABOUT US</a>
+                </li>
+                <li class="meet_the_team current"><a href="/#!/meet_the_team">MEET THE TEAM</a>
+                </li>
+                <!-- <li class="andela-network-btn">ANDELA NETWORK</li>
+                <li class="partners-btn">PARTNERS</li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-9">
+          <div class="col-md-12">
+            <div class="text_file">
+              <p>Our team combines decades of experience building publicly traded technology companies, advising U.S. presidents, and managing international development projects.
+              </p>
+            </div>
+          </div>
+          <div id="member-grid" class="col-md-12 col-sm-12 col-xs-12">
+            <div id="{{$index}}" class="col-md-2 col-sm-3 col-xs-6 member team">
+              <div class="description">
+                <p class='member_name'></p>
+                <p class='member_position'></p>
+              </div>
+              <div class="photos_divs">
+                <img ng-src='modules/core/img/headshots/{{member.image}}'>
+              </div>
+            </div>
+          </div>
+          <div class="member-expanded">
+            <div class="">
+              <h5 class="selected-name"></h5>
+              <h5></h5>
+            </div>
+            <div class="">
+              <div ng-bind-html="trustHml()"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
