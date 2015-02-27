@@ -30,6 +30,10 @@ gem 'autoprefixer-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+group :development do
+  gem 'git-duet'
+end
+
 
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
