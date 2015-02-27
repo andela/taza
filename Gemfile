@@ -31,15 +31,6 @@ gem 'autoprefixer-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
-# For git-duet dependencies
-group :development do
-  gem 'posix-spawn'
-  gem 'pry'
-  gem 'rubocop'
-  gem 'simplecov'
-
-end
-
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'rspec-rails'
