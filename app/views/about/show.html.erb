@@ -1,28 +1,27 @@
-<div class="col-md-12">
-  <div class="col-md-12">
+<section>
+  <div class="row">
     <div class="col-md-12 meet_container">
       <div class="meet_text">
-        <hr>
+        <hr/>
         <h3>ABOUT US</h3>
-        <hr>
+        <hr/>
       </div>
     </div>
-    <div class="about_us_page">
-      <div class="row  about_container">
-        <div class="transparent_about_div group">
-          <div class="col-sm-3 col-md-3 col-lg-3 about_sidebar">
+  </div>
+  <div class="about_us_page container">
+    <div class="row about_container">
+      <div class="transparent_about_div group">
+        <div class="col-sm-3 col-md-3 col-lg-3 about_sidebar">
             <div class="side_bar">
               <div class="link-controls navs_bars">
                 <ul>
-                  <li class="current"><a href="/#!/about_us">ABOUT US</a>
-                  </li>
-                  <li><a href="/#!/meet_the_team">MEET THE TEAM</a>
-                  </li>
+                  <li><%= link_to "ABOUT US", about_path(@about) %></li>
+                  <li><%= link_to "MEET THE TEAM",theteam_path(@theteam) %></li>
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="col-sm-9 col-md-9 col-lg-9">
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-9">
             <div class="col-md-12 text_div about_text_div">
               <h3>About</h3>
               <blockquote>
@@ -34,9 +33,8 @@
                 Our mission is to give brilliant young people in Africa an on-ramp to the digital economy and give companies access to world-class talent.
               </blockquote>
             </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>

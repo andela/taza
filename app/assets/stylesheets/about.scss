@@ -1,9 +1,9 @@
 // Place all the styles related to the about controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in layout.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .about_us_page {
-  background-image: url('dotted-map.png');
+  background-image: url(' dotted-map.png');
   margin-top: 0.5%;
   background-size: 100% 100%;
   min-height: 600px;
@@ -15,6 +15,9 @@
   background-color: white;
   opacity: 0.8;
   padding: 5% 0%;
+}
+.about_container {
+  margin-top: 7% !important;
 }
 .meet_text h3{
   font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', Helvetica,Arial,sans-serif;
