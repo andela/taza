@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
   get 'theteam', to: 'theteam#show', as: :theteam
   get 'about_us',to: 'about#show', as: :about
+
+  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" } do
+    get '/user/auth/:provider', to: 'users/omniauth_callbacks#passthru'
+  end
+
   resource :home, only: [:show]
+
+  devise_scope :user do
+    get 'sign_in', to: 'devise/sessions#new', as: :new_user_session
+    delete 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
+  end
+
   root 'homes#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
