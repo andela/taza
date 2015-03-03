@@ -5,7 +5,7 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'capybara/rails'
 
-#require 'factory_girl_rails'
+require 'factory_girl_rails'
 
 # require all rb files in the support directory
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
