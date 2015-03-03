@@ -74,6 +74,11 @@ GEM
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.3.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     figaro (1.1.0)
@@ -161,6 +166,8 @@ GEM
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
       rspec-mocks (~> 3.2.0)
+    rspec-collection_matchers (1.1.2)
+      rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.2.0)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.0)
@@ -230,6 +237,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   coffee-rails (~> 4.1.0)
   devise
+  factory_girl_rails
   figaro
   git-duet
   jquery-rails
@@ -240,6 +248,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails_12factor
   rspec
+  rspec-collection_matchers
   rspec-rails
   sass-rails (~> 5.0)
   simplecov
