@@ -11,7 +11,7 @@ describe Users::OmniauthCallbacksController, type: :controller do
     attr_accessor :existing_user
 
     before do
-      @existing_user = User.create!(email: "something@example.com")
+      @existing_user = create(:user)
       allow(User).to receive(:find_for_google_oauth2) { existing_user }
     end
 
