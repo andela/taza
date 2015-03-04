@@ -5,3 +5,7 @@ deployment:
       - git push git@heroku.com:taza-staging.git $CIRCLE_SHA1:refs/heads/master
       - heroku run rake db:migrate --app taza-staging:
           timeout: 400 # if your deploys take a long time
+
+test:
+  pre:
+     - CODECLIMATE_REPO_TOKEN=333cc0e5cb607b0330891773360220a78291881e848fb1c3a6921493e4f72dd6 bundle exec rake spec:fixture_builder:rebuild

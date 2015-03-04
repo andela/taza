@@ -63,4 +63,11 @@ RSpec.describe User, type: :model do
       expect(user).to have(1).errors_on(:email)
     end
   end
+
+  describe "user attributes" do
+    it "has attributes" do
+      user = users(:debbie)
+      expect(user.email).to eq('debbie@example.com')
+    end
+  end
 end
