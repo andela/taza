@@ -52,3 +52,8 @@ bower.json
 .powenv
 # Ignore application configuration
 /config/application.yml
+# adding fixtures to gitignore
+/spec/fixtures/*.yml
+
+
+
