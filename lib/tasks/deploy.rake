@@ -11,8 +11,3 @@ namespace :deploy do
     raise "deploy failed" unless exit_code == 0
   end
 end
-
-# task :with_defaults, :arg1, :arg2 do |t, args|
-#   args.with_defaults(:arg1 => :default_1, :arg2 => :default_2)
-#   puts "Args with defaults were: #{args}"
-# end
