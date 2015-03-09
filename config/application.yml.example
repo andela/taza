@@ -11,3 +11,6 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 GOOGLE_APP_ID: put app_id here see https://console.developers.google.com
 GOOGLE_APP_SECRET: put app_secret see https://console.developers.google.com
+#
+# optional for bootstrapping an admin user
+#TAZA_ADMIN_EMAIL: taza-admin@andela.co
