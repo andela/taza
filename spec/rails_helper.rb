@@ -19,6 +19,9 @@ ActiveRecord::Migration.maintain_test_schema!
 # Require fixture builder for auto generating fixtures
 # require_relative 'support/fixture_builder'
 
+#Capybara configurations
+# Capybara.default_driver = :webkit
+
 RSpec.configure do |config|
   config.render_views
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures

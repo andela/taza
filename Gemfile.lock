@@ -53,6 +53,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-webkit (1.4.1)
+      capybara (>= 2.3.0, < 2.5.0)
+      json
     codeclimate-test-reporter (0.4.6)
       simplecov (>= 0.7.1, < 1.0.0)
     coffee-rails (4.1.0)
@@ -237,6 +240,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3.3)
   capybara
+  capybara-webkit
   codeclimate-test-reporter
   coffee-rails (~> 4.1.0)
   devise
