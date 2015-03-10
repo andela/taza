@@ -1,0 +1,52 @@
+<section>
+  <div class="new_container">
+    <div class="col-md-12 meet_container">
+      <div class="meet_text">
+        <hr>
+        <h3>MEET THE TEAM</h3>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="side_bar">
+          <div class="link-controls navs_bars">
+            <ul>
+              <li><%= link_to "ABOUT US", about_path(@about) %></li>
+              <li><%= link_to "MEET THE TEAM", the_teams_path(@the_teams) %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9 col-md-9 col-lg-9">
+        <div class="col-md-12">
+          <div class="text_file">
+            <p>Our team combines decades of experience building publicly traded technology companies, advising U.S.
+              presidents, and managing international development projects.
+            </p>
+          </div>
+        </div>
+        <div id="member-grid" class="col-md-12 col-sm-12 col-xs-12">
+          <% @the_teams .each do |the_team| %>
+            <div id="<%= dom_id(the_team) %>" class="col-md-2 col-sm-3 col-xs-6 member team clickablephoto">
+                <div class="description">
+                  <%= the_team.name %>
+                  <%= the_team.position %>
+                </div>
+                <div class="photos_divs">
+                  <%= image_tag the_team.image %>
+                </div>
+            </div>
+          <% end %>
+          <% @the_teams.each do |the_team| %>
+            <div class="bio">
+              <p id="bio<%= dom_id(the_team) %>"><span id="name"><%= the_team.name %></span>
+                <br><span id="position"><%= the_team.position %></span>
+                <br><span id="teambio"><%= the_team.bio %></span></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
