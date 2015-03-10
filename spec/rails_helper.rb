@@ -20,7 +20,7 @@ ActiveRecord::Migration.maintain_test_schema!
 # require_relative 'support/fixture_builder'
 
 #Capybara configurations
-Capybara.default_driver = :webkit
+# Capybara.default_driver = :webkit
 
 RSpec.configure do |config|
   config.render_views
