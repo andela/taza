@@ -17,7 +17,6 @@ class CreateFixtures
         chad: FactoryGirl.create(
             :user,
             email: 'chad@woolley.com'
-
         )
     }
     users.each do |fixture_name, user|

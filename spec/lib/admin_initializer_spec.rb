@@ -29,5 +29,4 @@ RSpec.describe AdminInitializer do
     user.reload
     expect(user.admin?).to be_truthy
   end
-
 end
