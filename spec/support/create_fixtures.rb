@@ -13,6 +13,11 @@ class CreateFixtures
         debbie: FactoryGirl.create(
             :user,
             email: 'debbie@example.com'
+        ),
+        chad: FactoryGirl.create(
+            :user,
+            email: 'chad@woolley.com'
+
         )
     }
     users.each do |fixture_name, user|

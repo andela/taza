@@ -70,4 +70,29 @@ RSpec.describe User, type: :model do
       expect(user.email).to eq('debbie@example.com')
     end
   end
+
+  describe "add role to user" do
+    it "should have a default role" do
+      user = users(:debbie)
+      expect(user).to have_attributes(:role => "none")
+    end
+
+    it "should set the role" do
+      user = build(:user, role: "admin")
+      expect(user).to have_attributes(:role => "admin")
+    end
+  end
+
+  describe "set admin role" do
+    it "should check if user is an admin" do
+      user = users(:debbie)
+      expect(user.admin?).to be_falsey
+    end
+
+    it "should update user's role to admin" do
+      user = users(:debbie)
+      user.grant_admin_role
+      expect(user).to have_attributes(:role => "admin")
+    end
+  end
 end

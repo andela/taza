@@ -26,6 +26,7 @@ describe "layouts/application.html.erb" do
     describe "User Sign Out" do
       before do
         allow(view).to receive(:user_signed_in?).and_return(true)
+        allow(view).to receive(:current_user).and_return(build(:user))
       end
       it "shows the signout link" do
         render
