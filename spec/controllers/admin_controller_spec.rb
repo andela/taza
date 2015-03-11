@@ -7,6 +7,10 @@ RSpec.describe AdminController, type: :controller do
       get :show
       expect(response).to have_http_status(:success)
     end
+    it "renders admin page" do
+      get :show
+      expect(response).to render_template :show
+    end
   end
 
 end

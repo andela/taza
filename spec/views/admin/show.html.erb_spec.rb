@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe "admin/show.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+ it "should show admin" do
+   render
+   expect(rendered).to have_content('Admin#show')
+ end
 end

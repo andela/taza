@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'admin/show'
+  get 'admin/show', to: 'admin#show', as: :admin
 
   get 'theteam', to: 'theteam#show', as: :theteam
   get 'about_us',to: 'about#show', as: :about
