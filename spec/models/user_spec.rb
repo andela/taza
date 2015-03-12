@@ -93,6 +93,7 @@ RSpec.describe User, type: :model do
       user = users(:debbie)
       user.grant_admin_role
       expect(user).to have_attributes(:role => "admin")
+      expect(user.admin?).to be_truthy
     end
   end
 end
