@@ -45,4 +45,18 @@ describe "layouts/application.html.erb" do
         expect(rendered).to have_link("Admin")
       end
     end
+
+    describe "User profile" do
+      before do
+        user = users(:debbie)
+        allow(view).to receive(:user_signed_in?).and_return(true)
+        allow(view).to receive(:current_user).and_return(user)
+      end
+
+      it "should show the user profile" do
+        render
+        expect(rendered).to have_content('deborah enomah')
+        expect(rendered).to have_selector( 'img[src="https://image.jpg" ]' )
+      end
+    end
 end
