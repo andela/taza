@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
     user = User.where(email: data['email']).first
 
     unless user
-      user = User.create!(email: data['email'])
+      user = User.create!(email: data['email'], name: data['name'], image: data['image'] )
     end
     user
   end
