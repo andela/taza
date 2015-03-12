@@ -33,4 +33,16 @@ describe "layouts/application.html.erb" do
         expect(rendered).to have_link("Sign Out")
       end
     end
+    describe "Admin Sign in" do
+      before do
+        user = users(:debbie)
+        user.grant_admin_role
+        allow(view).to receive(:user_signed_in?).and_return(true)
+        allow(view).to receive(:current_user).and_return(user)
+      end
+      it "shows the admin link" do
+        render
+        expect(rendered).to have_link("Admin")
+      end
+    end
 end
