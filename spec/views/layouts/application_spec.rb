@@ -56,7 +56,7 @@ describe "layouts/application.html.erb" do
       it "should show the user profile" do
         render
         expect(rendered).to have_content('deborah enomah')
-        expect(rendered).to have_selector( 'img[src="https://image.jpg" ]' )
+        expect(rendered).to have_selector( 'img[src="https://image1.jpg" ]' )
       end
     end
 end
