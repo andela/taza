@@ -43,9 +43,6 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'rspec-rails'

@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-
   get 'admin/show', to: 'admin#show', as: :admin
 
-  get 'the_teams', to: 'the_teams#index', as: :the_teams
-
+  get 'theteam', to: 'theteam#show', as: :theteam
   get 'about_us',to: 'about#show', as: :about
 
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" } do
