@@ -71,29 +71,47 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "add role to user" do
+  describe "roles" do
     it "should have a default role" do
-      user = users(:debbie)
-      expect(user).to have_attributes(:role => "none")
+      debbie = users(:debbie)
+      expect(debbie).to have_role :fellow
     end
 
-    it "should set the role" do
-      user = build(:user, role: "admin")
-      expect(user).to have_attributes(:role => "admin")
-    end
-  end
-
-  describe "set admin role" do
-    it "should check if user is an admin" do
-      user = users(:debbie)
-      expect(user.admin?).to be_falsey
+    it "should assign admin role" do
+      chad = users(:chad)
+      expect(chad).to have_role :fellow
+      chad.add_role :admin
+      expect(chad).to have_role :admin
     end
 
-    it "should update user's role to admin" do
-      user = users(:debbie)
-      user.grant_admin_role
-      expect(user).to have_attributes(:role => "admin")
-      expect(user.admin?).to be_truthy
+    it "should remove roles" do
+      debbie = users(:debbie)
+      debbie.add_role :mentor
+      expect(debbie).to have_role :mentor
+      debbie.remove_role :mentor
+      expect(debbie).not_to have_role :mentor
+    end
+
+    it "should update roles" do
+      users = create_list(:user, 3)
+      admin = users.first.add_role :admin
+      users.second.add_role :fellow
+      users.third.add_role :mentor
+      users_ids = users.map(&:id).split(' ')
+      selected_roles = ['admin', 'mentor']
+      User.update_roles(users_ids, selected_roles, admin)
+
+      users.each do |user|
+        expect(user).to have_role :admin
+        expect(user).to have_role :mentor
+      end
+    end
+
+    it 'should not be able to remove admin role from the current user' do
+      chad = users(:chad)
+      chad.add_role :admin
+      expect { raise StandardError }.to raise_error
+      expect(chad).to have_role(:admin)
     end
   end
 end

@@ -20,6 +20,14 @@ ActiveRecord::Migration.maintain_test_schema!
 # Require fixture builder for auto generating fixtures
 # require_relative 'support/fixture_builder'
 
+class ActiveRecord::Base
+  mattr_accessor :shared_connection
+  @@shared_connection = nil
+  def self.connection
+    @@shared_connection || retrieve_connection
+  end
+end
+ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
 #Capybara configurations
 # Capybara.default_driver = :webkit
 
@@ -41,9 +49,9 @@ RSpec.configure do |config|
   #
   # You can disable this behaviour by removing the line below, and instead
   # explicitly tag your specs with their type, e.g.:
-  config.after :each do
-    ActiveRecord::Base.subclasses.each(&:delete_all)
-  end
+  # config.after :each do
+  #   ActiveRecord::Base.subclasses.each(&:delete_all)
+  # end
   #
   #     RSpec.describe UsersController, :type => :controller do
   #       # ...

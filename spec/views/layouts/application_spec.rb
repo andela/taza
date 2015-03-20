@@ -36,7 +36,7 @@ describe "layouts/application.html.erb" do
     describe "Admin Sign in" do
       before do
         user = users(:debbie)
-        user.grant_admin_role
+        user.add_role :admin
         allow(view).to receive(:user_signed_in?).and_return(true)
         allow(view).to receive(:current_user).and_return(user)
       end

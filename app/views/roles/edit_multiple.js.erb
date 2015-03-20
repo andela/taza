@@ -1,0 +1,6 @@
+<% if @users_ids %>
+    $("#modal-window").html("<%= escape_javascript(render 'roles/edit_multiple') %>");
+    $("#modal-window").modal();
+<% else %>
+    $('.ra-error').html('Please select a user or users');
+<% end %>
