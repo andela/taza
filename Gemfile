@@ -31,6 +31,15 @@ gem 'autoprefixer-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+# For authorization
+gem 'cancancan', '~> 1.10'
+
+# For role assigning
+gem 'rolify'
+
+# For view decoration
+gem 'draper', '~> 1.3'
+
 # Use Figaro to store environment secrets
 gem 'figaro'
 

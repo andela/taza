@@ -13,4 +13,8 @@ FactoryGirl.define do
     sequence(:image) { |n| "Image#{n}"}
     sequence(:bio) { |n| "Bio#{n}"}
   end
+
+  factory :role do
+    name 'fellow'
+  end
 end

@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Users</h2>
+
+  <%= form_tag edit_admin_roles_path, id: 'edit-form', remote: true, method: :get do %>
+      <p class="alert-js ra-error"></p>
+      <p>
+        <% if current_user.has_role? :admin %>
+            <%= submit_tag 'Edit Roles', id: 'edit', class: "btn btn-success" %>
+        <% end %>
+      </p>
+      <table class="table table-bordered">
+        <tr>
+          <th><input type="checkbox" id="check-all"></th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Roles</th>
+        </tr>
+        <% @users.each do |user| %>
+            <tr>
+              <td><%= check_box_tag "users_ids[]", user.id, false, class: "check-box" %></td>
+              <td><%= user.name %></td>
+              <td><%= user.email %></td>
+              <td><%= user.assigned_roles %></td>
+            </tr>
+        <% end %>
+      </table>
+  <% end %>
+
+  <div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel"></div>
+</div>

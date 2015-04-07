@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-  get 'admin/show', to: 'admin#show', as: :admin
-
   get 'team_members', to: 'team_members#index', as: :team_members
 
   get 'about_us',to: 'about#show', as: :about
@@ -9,6 +6,12 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" } do
     get '/user/auth/:provider', to: 'users/omniauth_callbacks#passthru'
   end
+
+  # get 'admin', to: 'admin#index', as: :admin
+  resources :admin, only: :index
+  get 'admin', to: 'admin#index', as: :admin
+  put 'admin/roles/update', to: 'roles#update_multiple', as: :update_admin_roles
+  get 'admin/roles/edit', to: 'roles#edit_multiple', as: :edit_admin_roles
 
   resource :home, only: [:show]
 

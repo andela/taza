@@ -22,7 +22,7 @@
                 <li><%= link_to "Your Role", '#' %></li>
                 <li><%= link_to "How it Works", '#' %></li>
                 <% if user_signed_in? %>
-                    <% if current_user.admin? %>
+                    <% if current_user.has_role? :admin %>
                         <li><%= link_to "Admin", :admin %></li>
                     <% end %>
                 <% else %>

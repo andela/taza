@@ -1,0 +1,23 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-body">
+      <div>
+        Which roles do you want to add/remove?
+      </div>
+      <%= form_tag update_admin_roles_path, method: :put do %>
+
+          <%= hidden_field_tag "users_ids[]", @users_ids %>
+
+          <% @roles.each do |role| %>
+              <%= check_box_tag "role_names[]", role, role_checked?(role) %>
+              <%= role %><br>
+          <% end %>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= submit_tag 'Save', class: "btn btn-primary" %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
