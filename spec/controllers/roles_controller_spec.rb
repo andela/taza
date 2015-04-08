@@ -38,7 +38,7 @@ describe RolesController, type: :controller    do
 
       expect(User).to receive(:update_roles)
       xhr :put, :update_multiple, users_ids: users.map(&:id).join(','), role_names: ['admin']
-      expect(response).to redirect_to admin_path
+      expect(response).to redirect_to admin_users_path
     end
 
     it 'expects no users ids if no checked box' do

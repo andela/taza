@@ -7,11 +7,14 @@ Rails.application.routes.draw do
     get '/user/auth/:provider', to: 'users/omniauth_callbacks#passthru'
   end
 
-  # get 'admin', to: 'admin#index', as: :admin
-  resources :admin, only: :index
-  get 'admin', to: 'admin#index', as: :admin
-  put 'admin/roles/update', to: 'roles#update_multiple', as: :update_admin_roles
-  get 'admin/roles/edit', to: 'roles#edit_multiple', as: :edit_admin_roles
+  namespace :admin do
+    resources :users, only: [:index]
+    get 'users/:id', to: 'users#destroy', as: :users_delete
+  end
+
+  put 'users/roles/update', to: 'roles#update_multiple', as: :update_users_roles
+  get 'users/roles/edit', to: 'roles#edit_multiple', as: :edit_users_roles
+
 
   resource :home, only: [:show]
 

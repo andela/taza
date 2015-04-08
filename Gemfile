@@ -40,6 +40,7 @@ gem 'rolify'
 # For view decoration
 gem 'draper', '~> 1.3'
 
+gem 'paranoia'
 # Use Figaro to store environment secrets
 gem 'figaro'
 

@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Users</h2>
 
-  <%= form_tag edit_admin_roles_path, id: 'edit-form', remote: true, method: :get do %>
+  <%= form_tag edit_users_roles_path, id: 'edit-form', remote: true, method: :get do %>
       <p class="alert-js ra-error"></p>
       <p>
         <% if current_user.has_role? :admin %>
@@ -14,13 +14,15 @@
           <th>Name</th>
           <th>Email</th>
           <th>Roles</th>
+          <th>Soft Delete</th>
         </tr>
         <% @users.each do |user| %>
-            <tr>
+            <tr id="<%= dom_id(user) %>">
               <td><%= check_box_tag "users_ids[]", user.id, false, class: "check-box" %></td>
               <td><%= user.name %></td>
               <td><%= user.email %></td>
               <td><%= user.assigned_roles %></td>
+              <td><%= link_to 'Delete', admin_users_delete_path(user),  data: { confirm: 'Are you sure?' } %></td>
             </tr>
         <% end %>
       </table>

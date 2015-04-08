@@ -16,9 +16,9 @@ class RolesController < ApplicationController
     params[:role_names] ||= []
     User.update_roles(params[:users_ids], params[:role_names], current_user)
     if params[:users_ids].include?(current_user.id.to_s) && !params[:role_names].include?('admin')
-      redirect_to admin_path, alert: 'You cannot remove your own admin privileges!'
+      redirect_to admin_users_path, alert: 'You cannot remove your own admin privileges!'
     else
-      redirect_to admin_path, notice: 'Roles updated successfully!'
+      redirect_to admin_users_path, notice: 'Roles updated successfully!'
     end
   end
 end

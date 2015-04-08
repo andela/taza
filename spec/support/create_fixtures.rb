@@ -22,6 +22,12 @@ class CreateFixtures
             email: 'chad@woolley.com',
             name: 'chad wolley',
             image: 'https://image2.jpg'
+        ),
+        yetty: FactoryGirl.create(
+            :user,
+            email: 'yetty@example.com',
+            name: 'yetty sanni',
+            image: 'https://image3.jpg'
         )
     }
     users.each do |fixture_name, user|
