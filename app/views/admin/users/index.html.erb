@@ -17,7 +17,7 @@
           <th>Soft Delete</th>
         </tr>
         <% @users.each do |user| %>
-            <tr id="<%= dom_id(user) %>">
+            <tr>
               <td><%= check_box_tag "users_ids[]", user.id, false, class: "check-box" %></td>
               <td><%= user.name %></td>
               <td><%= user.email %></td>
