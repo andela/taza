@@ -1,4 +1,49 @@
 
-<div>
-    <%= current_user.name  %>
+<section class="content">
+<div class="row">
+  <div class="col-sm-3">
+    <div class="user-wrap">
+      <div class="profile-pic">
+        <span class="f-badge purple">F</span>
+        <img src="http://www.sports-buddies.com/images/avatar-female.png" />
+      </div>
+      <div class="user-name">
+        <h5>
+          <p class="text-muted ng-binding"> <%=current_user.name%> </p>
+        </h5>
+        <p class="text-muted text-wrap ng-binding"></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-sm-9 col-xs-12">
+    <div class="unit-wrap bio">
+      <div class="user-profile text-wrap">
+        <h4> Bio </h4>
+        <hr>
+        <p class="ng-scope">No Bio yet</p>
+      </div>
+    </div>
+    <div class="unit-wrap bio">
+      <div class="user-profile">
+        <h4>Profile Details</h4>
+        <hr>
+        <dl class="dl-horizontal">
+          <dt>Full Name</dt>
+          <dd class="ng-binding"><%= current_user.name %></dd>
+        </dl>
+        <dl class="dl-horizontal">
+          <dt>Email</dt>
+          <dd class=""><%= current_user.email %></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
 </div>
+</section>
+
+
+
+<!--<div id="us">-->
+    <!--<%= current_user.name  %>-->
+<!--</div>-->

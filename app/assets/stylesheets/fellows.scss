@@ -1,3 +1,75 @@
 // Place all the styles related to the Fellows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  padding-top: 80px;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 1.35em;
+  color: #4c4c4c;
+}
+#us {
+  margin-top: 20%;
+}
+
+.user-wrap, .unit-wrap{
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #9E9E9E;
+//  margin-top: 150px
+}
+.profile-pic img {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+}
+.user-name {
+  padding: 10px;
+  word-wrap: break-word;
+}
+.f-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 50px;
+  height: auto;
+  padding: 10px;
+  font-size: 1.6em;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff !important;
+  text-align: center;
+  background: #0096ee;
+  border-radius: 0 0 0 5px;
+}
+.purple {
+  background-color: #825bd6;
+}
+.text-muted {
+  color: #787f8c;
+  line-height: 1.846;
+}
+.h4, .h5 {
+  font-family: "Open Sans", Sans-serif;
+  font-weight: 600;
+  color: #3c464d;
+}
+.profile-pic {
+  position: relative;
+}
+.bio {
+  padding: 10px 20px 30px;
+}
+.content {
+  padding: 10em 0;
+}
+.user-profile dt {
+  width: auto;
+  color: #222;
+  text-align: left;
+}
+.row {
+  margin-left: 150px;
+  margin-right: 150px;
+}
