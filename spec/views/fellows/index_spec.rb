@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 describe "fellows/index.html.erb" do
+  attr_accessor :user
   before do
-    user = users(:debbie)
+    @user = users(:debbie)
     user.add_role :fellow
     allow(view).to receive(:user_signed_in?).and_return(true)
     allow(view).to receive(:current_user).and_return(user)
@@ -13,5 +14,4 @@ describe "fellows/index.html.erb" do
 
     expect(rendered).to have_content(user.name)
   end
-
 end
