@@ -10,6 +10,10 @@ class Ability
         can :read, :all
         can :manage, :all
       end
+
+      if user.has_role? :fellow
+        can :manage, Fellow
+      end
     #   if user.admin?
     #     can :manage, :all
     #   else

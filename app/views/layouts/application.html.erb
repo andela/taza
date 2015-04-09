@@ -36,6 +36,7 @@
                   <span class="caret"></span></a>
                 <% end %>
                   <ul role="menu" class="dropdown-menu">
+                    <li><%= link_to "My Profile", fellows_path %></li>
                     <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %></li>
                   </ul>
                 </li>

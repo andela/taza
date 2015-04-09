@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   rolify
+  has_many :fellows
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :registerable, :trackable, :omniauthable,

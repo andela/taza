@@ -1,13 +1,9 @@
 require 'rails_helper'
 
 describe Ability, type: :model do
-  attr_accessor :user, :ability
-  # subject(:ability) { Ability.new(user) }
-  # let(:user) { nil }
-
+  attr_accessor :user, :ability, :debbie
 
   context 'admin' do
-    # let(:user) { create(:user) }
 
     before do
       @user = create(:user)
@@ -25,6 +21,18 @@ describe Ability, type: :model do
 
     it 'can manage role' do
       expect(ability.can?(:read, :all)).to be_truthy
+    end
+  end
+
+  context 'fellow' do
+    before do
+      @debbie = users(:debbie)
+      debbie.add_role :fellow
+      @ability = Ability.new(debbie)
+    end
+
+    it 'should have a fellow role' do
+      expect(debbie).to have_role :fellow
     end
   end
 end

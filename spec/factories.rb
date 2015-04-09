@@ -1,4 +1,7 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :fellow do
+    bio "MyText"
+  end
+
 
   factory :user do
     sequence(:name) { |n| "User#{n}"}
