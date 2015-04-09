@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe FellowsController, type: :controller do
+<<<<<<< HEAD
   before do
     user = users(:chad)
     allow(request.env['warden']).to receive(:authenticate!).and_return(user)
@@ -9,6 +10,8 @@ RSpec.describe FellowsController, type: :controller do
     get :index
   end
 
+=======
+>>>>>>> [#87892960] Added controller and model for a fellow with corresponding test
   it 'renders the fellow profile view' do
     get :index
     expect(response).to render_template :index
