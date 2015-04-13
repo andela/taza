@@ -58,7 +58,6 @@ describe "layouts/application.html.erb" do
         expect(rendered).to have_content('deborah enomah')
         expect(rendered).to have_selector( 'img[src="https://image1.jpg" ]' )
         expect(rendered).to have_link('My Profile')
-        expect(rendered).to have_link('Edit Profile')
       end
     end
 end
