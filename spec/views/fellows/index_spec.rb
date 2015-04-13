@@ -13,5 +13,6 @@ describe "fellows/index.html.erb" do
     render
 
     expect(rendered).to have_content(user.name)
+    expect(rendered).to have_content(user.email)
   end
 end
