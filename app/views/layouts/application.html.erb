@@ -31,7 +31,7 @@
                 <% if current_user %>
                 <li class="dropdown">
                 <a href="#" data-toggle="dropdown" data-target="dropdown-menu" role="button" aria-expanded="false" class="dropdown-toggle profile-img">
-                  <%= image_tag current_user.image %>
+                  <%= image_tag current_user.image, id: "img" %>
                   <%= current_user.name %>
                   <span class="caret"></span></a>
                 <% end %>

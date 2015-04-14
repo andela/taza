@@ -60,11 +60,11 @@ body {
   position: relative;
 }
 
-img {
+#img {
   display: inline-block;
   float: left;
-//  width: 32px;
-//  height: 32px;
+  width: 32px;
+  height: 32px;
   margin: -6px 10px 0 0;
   border-radius: 50%;
 }
